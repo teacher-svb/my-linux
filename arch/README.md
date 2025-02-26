@@ -13,8 +13,7 @@ reboot
 ## fix keyboard layout for BE keyboard
 
 ```
-sudo localectl set-keymap --no-convert be-latin1
-sudo localectl set-x11-keymap be azerty
+sudo localectl set-keymap be-latin1 azerty
 ```
 
 reboot
