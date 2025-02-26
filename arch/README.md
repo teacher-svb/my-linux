@@ -71,19 +71,19 @@ sudo make clean install
 sudo pacman -S nano xorg-xrandr arandr
 ```
 
-### screen resolution
+#### screen resolution
 
 ```
 sudo pacman -S xorg-xrandr arandr
 ```
 
-### nano
+#### nano
 
 ```
 sudo pacman -S nano
 ```
 
-### vs code (as snap)
+#### vs code (as snap)
 
 `sudo snap install code --classic`
 
