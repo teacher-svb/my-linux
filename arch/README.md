@@ -37,6 +37,8 @@ reboot
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
+reboot
+
 ## Install base software
 
 ### through Linutil
