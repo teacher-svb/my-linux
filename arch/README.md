@@ -22,8 +22,6 @@ curl -fsSL https://christitus.com/linux | sh
 
 select `System Setup > Arch Linux > Yay AUR helper`
 
-## Install DWM
-
 ## Install Snapd
 
 ```
@@ -43,11 +41,29 @@ reboot
 
 ### through Linutil
 
-### terminal
+#### Install DWM
 
-### bash
+Open config.h from DWM in home folder
 
-### browser
+```
+static Key keys[] = {
+    ...
+    TAGKEYS(                        XK_ampersand,              0)
+    TAGKEYS(                        XK_eacute,                 1)
+    TAGKEYS(                        XK_quotedbl,               2)
+    TAGKEYS(                        XK_apostrophe,             3)
+    TAGKEYS(                        XK_parenleft,              4)
+```
+
+```
+sudo make clean install
+```
+
+#### terminal
+
+#### bash
+
+#### browser
 
 ### through CLI
 
