@@ -83,6 +83,10 @@ sudo make clean install
 sudo pacman -S xorg-xrandr arandr
 ```
 
+open `arandr`, change resolution/position and save file to ~/.screenlayout
+
+open `~/.xinitrc` and add `sh ~/.screenlayout/<filename>.sh &` (replace with your filename)
+
 ### nano (CLI)
 
 ```
