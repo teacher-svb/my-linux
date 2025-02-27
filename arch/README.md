@@ -80,12 +80,12 @@ sudo make clean install
 ### screen resolution (CLI)
 
 ```
-sudo pacman -S xorg-xrandr arandr
+sudo pacman -S xorg-xrandr arandr autorandr
 ```
 
-open `arandr`, change resolution/position and save file to ~/.screenlayout
+open `arandr`, change resolution/position
 
-open `~/.xinitrc` and add `sh ~/.screenlayout/<filename>.sh &` (replace with your filename)
+call `autorandr --save <profilename>` (to set a specific profile as default, also call `autorandr --default <profilename>`)
 
 ### nano (CLI)
 
