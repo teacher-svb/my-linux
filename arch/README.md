@@ -39,11 +39,23 @@ reboot
 
 ## Install base software
 
-### through Linutil
+### Install DWM (with Linutil)
 
-#### Install DWM
+#### adding ALT as modkey
 
-Open config.h from DWM in home folder
+```
+/* key definitions */
+#define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
+```
+
+#### change terminal to alacritty
+
+```
+static const char *termcmd[] = { "alacritty", NULL };
+```
+
+#### fix for BE Azerty shortcuts:
 
 ```
 static Key keys[] = {
@@ -59,25 +71,19 @@ static Key keys[] = {
 sudo make clean install
 ```
 
-#### terminal
+### terminal
 
-#### bash
+### bash
 
-#### browser
+### browser
 
-### through CLI
-
-```
-sudo pacman -S nano xorg-xrandr arandr
-```
-
-#### screen resolution
+### screen resolution (CLI)
 
 ```
 sudo pacman -S xorg-xrandr arandr
 ```
 
-#### nano
+### nano (CLI)
 
 ```
 sudo pacman -S nano
