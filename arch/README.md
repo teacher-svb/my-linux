@@ -19,10 +19,10 @@ cd ~ && touch .xinitrc # add exec dwm
 
 startx # starts x-server and will initialize system with .xinitrc, which starts DWM
 
-# (yay AUR install)
+# (yay AUR Helper & Virtualization)
 curl -fsSL https://christitus.com/linux | sh
 
-# (software install)
+# (software install: browser, docker, alacritty, fastfetch)
 curl -fsSL https://christitus.com/linux | sh
 ```
 
