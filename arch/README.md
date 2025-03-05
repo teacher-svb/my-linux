@@ -6,12 +6,17 @@ curl -fsSL https://christitus.com/linux | sh
 
 sudo localectl set-keymap be-latin1 azerty
 
+sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano
+sudo pacman -S --needed --noconfirm libxcb meson libev uthash libconfig
+
+git clone https://git.suckless.org/dwm
+
+cd dwm
+
+sudo make clean install
+
 # (yay AUR install)
 curl -fsSL https://christitus.com/linux | sh
-
-sudo pacman -S xorg-server xorg-xinit curl nano
-cd ~
-curl -O https://dl.suckless.org/dwm/dwm-6.5.tar.gz
 
 # (software install)
 curl -fsSL https://christitus.com/linux | sh
