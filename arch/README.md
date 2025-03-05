@@ -1,7 +1,26 @@
 # my Arch Linux setup
 
+```bash
+# (arch server install)
+curl -fsSL https://christitus.com/linux | sh
+
+sudo localectl set-keymap be-latin1 azerty
+
+# (yay AUR install)
+curl -fsSL https://christitus.com/linux | sh
+
+sudo pacman -S xorg-server xorg-xinit curl nano
+cd ~
+curl -O https://dl.suckless.org/dwm/dwm-6.5.tar.gz
+
+# (software install)
+curl -fsSL https://christitus.com/linux | sh
 ```
-wireplumber bc
+
+
+
+```
+sudo pacman -S wireplumber bc
 ```
 
 ## basic server setup
