@@ -1,5 +1,9 @@
 # my Arch Linux setup
 
+```
+wireplumber bc
+```
+
 ## basic server setup
 
 open linutil from christitus:
