@@ -15,6 +15,10 @@ cd dwm
 
 sudo make clean install
 
+cd ~ && touch .xinitrc # add exec dwm
+
+startx
+
 # (yay AUR install)
 curl -fsSL https://christitus.com/linux | sh
 
