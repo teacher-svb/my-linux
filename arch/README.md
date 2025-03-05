@@ -17,7 +17,7 @@ sudo make clean install
 
 cd ~ && touch .xinitrc # add exec dwm
 
-startx
+startx # starts x-server and will initialize system with .xinitrc, which starts DWM
 
 # (yay AUR install)
 curl -fsSL https://christitus.com/linux | sh
