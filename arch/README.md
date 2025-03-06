@@ -6,23 +6,30 @@ curl -fsSL https://christitus.com/linux | sh
 
 sudo localectl set-keymap be-latin1 azerty
 
+# (terminal install: alacritty, fastfetch, bash)
+curl -fsSL https://christitus.com/linux | sh
+
 sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano
 sudo pacman -S --needed --noconfirm libxcb meson libev uthash libconfig
 
 git clone https://git.suckless.org/dwm
 
 cd dwm
-
+# apply patches:
+# - cool autostart (patch fail can be ignored)
+# - statuscmd (manually fix patch after applying)
+# then
 sudo make clean install
 
 cd ~ && touch .xinitrc # add exec dwm
 
-startx # starts x-server and will initialize system with .xinitrc, which starts DWM
+# start x-server and will initialize system using .xinitrc, which starts DWM
+startx
 
 # (yay AUR Helper & Virtualization)
 curl -fsSL https://christitus.com/linux | sh
 
-# (software install: browser, docker, alacritty, fastfetch)
+# (software install: browser, docker)
 curl -fsSL https://christitus.com/linux | sh
 ```
 
