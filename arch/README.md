@@ -31,24 +31,21 @@ curl -fsSL https://christitus.com/linux | sh
 
 # (software install: browser, docker)
 curl -fsSL https://christitus.com/linux | sh
+
+# install snapd
+yay -S snapd
+systemctl enable snapd
+
+# reboot
+
+sudo ln -s /var/lib/snapd/snap /snap
+
+# reboot
 ```
-
-
 
 ```
 sudo pacman -S wireplumber bc
 ```
-
-
-## Add AUR
-
-open linutil from christitus:
-
-```
-curl -fsSL https://christitus.com/linux | sh
-```
-
-select `System Setup > Arch Linux > Yay AUR helper`
 
 ## Install Snapd
 
