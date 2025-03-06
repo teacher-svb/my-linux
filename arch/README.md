@@ -6,11 +6,11 @@ curl -fsSL https://christitus.com/linux | sh
 
 sudo localectl set-keymap be-latin1 azerty
 
+# (arch install: yay AUR helper)
 # (terminal install: alacritty, fastfetch, bash)
 curl -fsSL https://christitus.com/linux | sh
 
-sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano
-sudo pacman -S --needed --noconfirm libxcb meson libev uthash libconfig
+sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano libxcb meson libev uthash libconfig
 
 git clone https://git.suckless.org/dwm
 
@@ -39,17 +39,6 @@ curl -fsSL https://christitus.com/linux | sh
 sudo pacman -S wireplumber bc
 ```
 
-## basic server setup
-
-open linutil from christitus:
-
-```
-curl -fsSL https://christitus.com/linux | sh
-```
-
-select `System Setup > Arch Linux > Arch Server Setup`
-
-reboot
 
 ## Add AUR
 
