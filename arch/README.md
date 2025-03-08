@@ -86,13 +86,6 @@ sudo make clean install
 sudo nano config.h
 ```
 
-Create the autostart variable:
-```bash
-static const char *const autostart[] = {
-	NULL
-};
-```
-
 change termcmd to use alacritty:
 ```bash
 static const char *termcmd[] = { "alacritty", NULL };
