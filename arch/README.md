@@ -189,7 +189,9 @@ reboot
 static const char *termcmd[] = { "alacritty", NULL };
 ```
 
-#### fix for BE Azerty shortcuts:
+# Additional DWM Configurations
+
+## fix for BE Azerty shortcuts:
 
 ```
 static Key keys[] = {
@@ -205,12 +207,6 @@ static Key keys[] = {
 sudo make clean install
 ```
 
-### terminal
-
-### bash
-
-### browser
-
 ### screen resolution (CLI)
 
 ```
@@ -221,22 +217,6 @@ open `arandr`, change resolution/position
 
 call `autorandr --save <profilename>` (to set a specific profile as default, also call `autorandr --default <profilename>`)
 
-### nano (CLI)
-
-```
-sudo pacman -S nano
-```
-
 #### vs code (as snap)
 
 `sudo snap install code --classic`
-
-## Settings
-
-### fix keyboard layout for BE keyboard
-
-```
-sudo localectl set-keymap be-latin1 azerty
-```
-
-reboot
