@@ -110,8 +110,18 @@ sudo make clean install
 
 ### start DWM
 
+first test with:
 ```bash
 startx
+```
+
+if everything works fine, add the following to `~/.bashrc`
+
+```bash
+# Auto-start DWM if we're on TTY1 and .xinitrc contains "exec dwm"
+if [[ "$(tty)" == "/dev/tty1" ]] && [ -f "$HOME/.xinitrc" ] && grep -q "^exec dwm" "$HOME/.xinitrc"; then
+    startx
+fi
 ```
 
 ---
