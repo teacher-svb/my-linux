@@ -199,6 +199,34 @@ curl -fsSL https://christitus.com/linux | sh
 
 ## Additional Configuration
 
+### Alacritty
+
+install nerd-fonts
+
+```
+sudo pacman -S nerd-fonts
+```
+
+create config file
+```
+mkdir -p ~/.config/alacritty
+cd ~/.config/alacritty
+touch alacritty.toml
+```
+
+open alacritty.toml file and add the following config:
+
+```
+[font]
+normal.family="FiraCode Nerd Font"
+```
+
+### Bash
+
+### Starship
+
+
+
 ### DWM
 
 ```
