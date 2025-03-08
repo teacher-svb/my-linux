@@ -1,6 +1,6 @@
 # my Arch Linux setup
 
-## base setup
+## 1. base setup
 ```bash
 # (arch server install)
 curl -fsSL https://christitus.com/linux | sh
@@ -10,7 +10,7 @@ curl -fsSL https://christitus.com/linux | sh
 sudo localectl set-keymap be-latin1 azerty
 ```
 
-## terminal setup (fastfetch, starship)
+## 2. terminal setup (fastfetch, starship)
 
 ### FastFetch
 
@@ -33,7 +33,15 @@ add the following to `~/.bashrc`
 eval "$(starship init bash)"
 ```
 
-## DWM (alacritty, DWM, DMenu)
+## 3. SSH *(optional)*
+
+```
+sudo pacman -S openssh
+sudo systemctl start sshd
+sudo systemctl enable sshd
+```
+
+## 4. DWM (alacritty, DWM, DMenu)
 
 ### alacritty
 
