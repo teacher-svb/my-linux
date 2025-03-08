@@ -74,15 +74,27 @@ patch < dwm-statuscmd-20210405-67d76bd.diff
 open `config.h` in `dwm` folder.
 
 Create the autostart variable:
+```bash
 static const char *const autostart[] = {
 	NULL
 };
+```
 
-- change termcmd to use alacritty
-- change MODKEY to use the Meta key (Mod4Key)
-- add ALTKEY definition to use the Alt key (Mod1Key)
-- change terminal startup to use:
-  - `ALTKEY|ControlMask, XK_t, ...`
+change termcmd to use alacritty:
+```bash
+static const char *termcmd[] = { "alacritty", NULL };
+```
+
+change MODKEY to use the Meta key (Mod4Mask) and add ALTKEY to use the Alt key (Mod1Mask)
+```bash
+/* key definitions */
+#define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
+```
+- change terminal shortcut to use:
+```bash
+ALTKEY|ControlMask, XK_t, ...
+```
 
 #### build DWM
 
@@ -125,73 +137,69 @@ fi
 ```
 
 ---
+# Additional Setup
 
+## Additional Package Managers
+
+### YAY AUR Helper
+
+CTT Linux tool, go to `Arch > Yay AUR Helper`
+
+```bash
+curl -fsSL https://christitus.com/linux | sh
 ```
 
-# (yay AUR Helper & Virtualization)
-curl -fsSL https://christitus.com/linux | sh
+### Flatpak / Flathub
 
-# (software install: browser, docker)
-curl -fsSL https://christitus.com/linux | sh
+CTT Linux tool, go to `Applications Setup > Flatpak / Flathub`
 
-# install snapd
+```bash
+curl -fsSL https://christitus.com/linux | sh
+```
+
+### Snap
+
+```
 yay -S snapd
 systemctl enable snapd
-
-# reboot
-
-sudo ln -s /var/lib/snapd/snap /snap
-
-# reboot
 ```
+
+reboot
+
+```
+sudo ln -s /var/lib/snapd/snap /snap
+```
+
+## Additional Software
+
+### vs code (as snap)
+
+`sudo snap install code --classic`
+
+
+### Browser (Brave)
+
+```bash
+curl -fsS https://dl.brave.com/install.sh | sh
+```
+
+### Docker
+
+CTT Linux tool, go to `Applications Setup > Docker`
+
+```bash
+curl -fsSL https://christitus.com/linux | sh
+```
+
+## Additional Configuration
+
+### DWM
 
 ```
 sudo pacman -S wireplumber bc
 ```
 
-```
-# (arch install: yay AUR helper)
-# (terminal install: alacritty, fastfetch, bash)
-curl -fsSL https://christitus.com/linux | sh
-```
-
-
-## Install Snapd
-
-```
-yay -S snapd
-systemctl enable snapd
-```
-
-reboot
-
-```
-sudo ln -s /var/lib/snapd/snap /snap
-```
-
-reboot
-
-## Install base software
-
-### Install DWM (with Linutil)
-
-#### adding ALT as modkey
-
-```
-/* key definitions */
-#define MODKEY Mod4Mask
-#define ALTKEY Mod1Mask
-```
-
-#### change terminal to alacritty
-
-```
-static const char *termcmd[] = { "alacritty", NULL };
-```
-
-# Additional DWM Configurations
-
-## fix for BE Azerty shortcuts:
+#### fix for BE Azerty shortcuts:
 
 ```
 static Key keys[] = {
@@ -203,10 +211,6 @@ static Key keys[] = {
     TAGKEYS(                        XK_parenleft,              4)
 ```
 
-```
-sudo make clean install
-```
-
 ### screen resolution (CLI)
 
 ```
@@ -216,7 +220,3 @@ sudo pacman -S xorg-xrandr arandr autorandr
 open `arandr`, change resolution/position
 
 call `autorandr --save <profilename>` (to set a specific profile as default, also call `autorandr --default <profilename>`)
-
-#### vs code (as snap)
-
-`sudo snap install code --classic`
