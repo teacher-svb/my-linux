@@ -1,30 +1,122 @@
 # my Arch Linux setup
 
+## base setup
 ```bash
 # (arch server install)
 curl -fsSL https://christitus.com/linux | sh
 
+# REBOOT
+
 sudo localectl set-keymap be-latin1 azerty
+```
 
-# (arch install: yay AUR helper)
-# (terminal install: alacritty, fastfetch, bash)
-curl -fsSL https://christitus.com/linux | sh
+## terminal setup (fastfetch, starship)
 
+### FastFetch
+
+```bash
+sudo pacman -S fastfetch
+```
+add the following to `~/.bashrc`
+```bash
+fastfetch
+```
+
+### Starship
+
+```bash
+curl -sS https://starship.rs/install.sh | sh
+```
+add the following to `~/.bashrc`
+
+```bash
+eval "$(starship init bash)"
+```
+
+## DWM (alacritty, DWM, DMenu)
+
+### alacritty
+
+```bash
+sudo pacman -S alacritty
+```
+
+### build DWM
+
+#### prerequisites (TODO: are they all needed?)
+```bash
 sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano libxcb meson libev uthash libconfig
+```
 
+#### Download DWM
+
+```bash
 git clone https://git.suckless.org/dwm
-
 cd dwm
-# apply patches:
-# - cool autostart (patch fail can be ignored)
-# - statuscmd (manually fix patch after applying)
-# then
+```
+
+#### patch DWM
+
+```bash
+# cool autostart
+curl -O https://dwm.suckless.org/patches/cool_autostart/dwm-cool-autostart-6.2.diff
+# ignore patch errors
+patch < dwm-cool-autostart-6.2.diff
+
+# statuscmd
+curl -O https://dwm.suckless.org/patches/statuscmd/dwm-statuscmd-20210405-67d76bd.diff
+# TODO: manual fix needed after applying patch
+patch < dwm-statuscmd-20210405-67d76bd.diff
+```
+
+#### base configuration DWM
+
+open `config.h` in `dwm` folder.
+
+Create the autostart variable:
+static const char *const autostart[] = {
+	NULL
+};
+
+- change termcmd to use alacritty
+- change MODKEY to use the Meta key (Mod4Key)
+- add ALTKEY definition to use the Alt key (Mod1Key)
+- change terminal startup to use:
+  - `ALTKEY|ControlMask, XK_t, ...`
+
+#### build DWM
+
+```bash
 sudo make clean install
+```
+then create `.xinitrc` file, and add DWM startup to file
+```bash
+cd ~ && touch .xinitrc
+```
+add the following to `~/.xinitrc`
 
-cd ~ && touch .xinitrc # add exec dwm
+```bash
+exec dwm
+```
 
-# start x-server and will initialize system using .xinitrc, which starts DWM
+### DMenu
+
+inside the `dwm` folder:
+```bash
+git clone https://git.suckless.org/dmenu
+cd dmenu
+sudo make clean install
+```
+
+### start DWM
+
+```bash
 startx
+```
+
+---
+
+```
 
 # (yay AUR Helper & Virtualization)
 curl -fsSL https://christitus.com/linux | sh
@@ -46,6 +138,13 @@ sudo ln -s /var/lib/snapd/snap /snap
 ```
 sudo pacman -S wireplumber bc
 ```
+
+```
+# (arch install: yay AUR helper)
+# (terminal install: alacritty, fastfetch, bash)
+curl -fsSL https://christitus.com/linux | sh
+```
+
 
 ## Install Snapd
 
