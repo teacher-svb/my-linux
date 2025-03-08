@@ -79,7 +79,12 @@ patch < dwm-statuscmd-20210405-67d76bd.diff
 
 #### base configuration DWM
 
-open `config.h` in `dwm` folder.
+Generate and open `config.h`.
+```
+cd ~/dwm
+sudo make clean install
+sudo nano config.h
+```
 
 Create the autostart variable:
 ```bash
