@@ -152,7 +152,7 @@ fi
 ---
 # Additional Setup
 
-## Additional Package Managers
+## A. Additional Package Managers
 
 ### YAY AUR Helper
 
@@ -183,7 +183,7 @@ reboot
 sudo ln -s /var/lib/snapd/snap /snap
 ```
 
-## Additional Software
+## B. Additional Software
 
 ### vs code (as snap)
 
@@ -204,7 +204,7 @@ CTT Linux tool, go to `Applications Setup > Docker`
 curl -fsSL https://christitus.com/linux | sh
 ```
 
-## Additional Configuration
+## C. Additional Configuration
 
 ### Alacritty
 
