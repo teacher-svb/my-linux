@@ -18,7 +18,14 @@ sudo systemctl start sshd
 sudo systemctl enable sshd
 ```
 
-## 3. terminal setup (fastfetch, starship)
+## 3. terminal setup (nerd-fonts, fastfetch, starship)
+
+
+### nerd-fonts
+
+```
+sudo pacman -S nerd-fonts
+```
 
 ### FastFetch
 
@@ -200,12 +207,6 @@ curl -fsSL https://christitus.com/linux | sh
 ## Additional Configuration
 
 ### Alacritty
-
-install nerd-fonts
-
-```
-sudo pacman -S nerd-fonts
-```
 
 create config file
 ```
