@@ -10,7 +10,15 @@ curl -fsSL https://christitus.com/linux | sh
 sudo localectl set-keymap be-latin1 azerty
 ```
 
-## 2. terminal setup (fastfetch, starship)
+## 2. SSH *(optional)*
+
+```
+sudo pacman -S openssh
+sudo systemctl start sshd
+sudo systemctl enable sshd
+```
+
+## 3. terminal setup (fastfetch, starship)
 
 ### FastFetch
 
@@ -31,14 +39,6 @@ add the following to `~/.bashrc`
 
 ```bash
 eval "$(starship init bash)"
-```
-
-## 3. SSH *(optional)*
-
-```
-sudo pacman -S openssh
-sudo systemctl start sshd
-sudo systemctl enable sshd
 ```
 
 ## 4. DWM (alacritty, DWM, DMenu)
