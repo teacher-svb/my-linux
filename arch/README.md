@@ -132,6 +132,8 @@ change MODKEY to use the Meta key (Mod4Mask) and add ALTKEY to use the Alt key (
 ALTKEY|ControlMask, XK_t, ...
 ```
 
+</details>
+
 #### build DWM
 
 ```bash
@@ -146,8 +148,6 @@ add the following to `~/.xinitrc`
 ```bash
 exec dwm
 ```
-
-</details>
 
 ### DMenu
 
