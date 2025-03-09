@@ -60,7 +60,7 @@ sudo pacman -S alacritty
 <details>
   <summary>  
   
-### DWM: my-dwm repo
+### optionA: DWM: my-dwm repo
   
   </summary>
 
@@ -75,7 +75,7 @@ cd my-dwm
 <details>
   <summary>  
   
-### DWM: Build and Patch from scratch  
+### option B: DWM: Build and Patch from scratch  
   
   </summary>
 
