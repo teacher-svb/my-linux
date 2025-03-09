@@ -59,7 +59,11 @@ sudo pacman -S alacritty
 
 
 <details>
-  <summary>Build and Patch from scratch</summary>
+  <summary>  
+  
+    ### Build and Patch from scratch  
+  
+  </summary>
 
 ### build DWM
 
