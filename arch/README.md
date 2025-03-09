@@ -57,11 +57,25 @@ sudo pacman -S alacritty
 ```
 
 
+<details>
+  <summary>  
+  
+### DWM: my-dwm repo
+  
+  </summary>
+
+```bash
+cd ~
+git clone [https://git.suckless.org/dwm](https://github.com/teacher-svb/my-dwm.git)
+cd my-dwm
+```
+
+</details>
 
 <details>
   <summary>  
   
-### Build and Patch from scratch  
+### DWM: Build and Patch from scratch  
   
   </summary>
 
