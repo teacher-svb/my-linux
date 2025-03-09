@@ -56,6 +56,11 @@ eval "$(starship init bash)"
 sudo pacman -S alacritty
 ```
 
+
+
+<details>
+  <summary>Build and Patch from scratch</summary>
+
 ### build DWM
 
 #### prerequisites (TODO: are they all needed?)
@@ -123,6 +128,8 @@ add the following to `~/.xinitrc`
 ```bash
 exec dwm
 ```
+
+</details>
 
 ### DMenu
 
