@@ -83,7 +83,7 @@ cd my-dwm
 
 #### prerequisites (TODO: are they all needed?)
 ```bash
-sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano libxcb meson libev uthash libconfig
+sudo pacman -S --needed --noconfirm xorg-xinit xorg-server base-devel libx11 libxinerama libxft git unzip lxappearance curl nano libxcb meson libev uthash libconfig xcb-util
 ```
 
 #### Download DWM
@@ -257,6 +257,15 @@ normal.family="FiraCode Nerd Font"
 
 ```
 sudo pacman -S wireplumber bc
+```
+
+#### DWM blocks async
+
+```
+git clone https://github.com/UtkarshVerma/dwmblocks-async.git
+cd dwmblocks-async
+sudo nano config.h
+sudo make install
 ```
 
 #### fix for BE Azerty shortcuts:
