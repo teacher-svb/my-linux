@@ -1,13 +1,10 @@
 # my Arch Linux setup
 
 ## 1. base setup
+
+use the archinstall script to launch the installer.
 ```bash
-# (arch server install)
-curl -fsSL https://christitus.com/linux | sh
-
-# REBOOT
-
-sudo localectl set-keymap be-latin1 azerty
+archinstall
 ```
 
 ## 2. SSH *(optional)*
