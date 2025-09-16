@@ -246,6 +246,12 @@ normal.family="FiraCode Nerd Font"
 
 ### Bash
 
+add the following to `/etc/inputrc`:
+
+```
+set completion-ignore-case on
+```
+
 ### Starship
 
 
