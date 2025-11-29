@@ -10,7 +10,9 @@
   // },
   "display": {
     "separator": " ",
-    "bar": {"border": true, "width": 10}
+    "bar": {"border": {
+        
+    }, "width": 10}
   },
   "general": {
 
